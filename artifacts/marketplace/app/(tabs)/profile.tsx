@@ -34,18 +34,25 @@ export default function ProfileScreen() {
   const myListings = products.filter((p) => p.sellerId === currentUser.id);
   const myReviews = reviews.filter((r) => r.targetUserId === currentUser.id);
 
-  const handleLogout = () => {
-    Alert.alert("Sign Out", "Are you sure you want to sign out?", [
-      { text: "Cancel", style: "cancel" },
-      {
-        text: "Sign Out",
-        style: "destructive",
-        onPress: async () => {
-          await logout();
-          router.replace("/auth/splash" as never);
+  const handleLogout = async () => {
+    if (Platform.OS === "web") {
+      const confirmed = window.confirm("Are you sure you want to sign out?");
+      if (!confirmed) return;
+      await logout();
+      router.replace("/auth/splash" as never);
+    } else {
+      Alert.alert("Sign Out", "Are you sure you want to sign out?", [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Sign Out",
+          style: "destructive",
+          onPress: async () => {
+            await logout();
+            router.replace("/auth/splash" as never);
+          },
         },
-      },
-    ]);
+      ]);
+    }
   };
 
   const menuItems = [
