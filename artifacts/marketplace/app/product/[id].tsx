@@ -4,6 +4,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { Alert, Image, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useApp } from "@/context/AppContext";
+import productImageMap from "@/constants/productImages";
 import { useColors } from "@/hooks/useColors";
 
 function timeAgo(iso: string) {
@@ -44,6 +45,7 @@ export default function ProductDetailScreen() {
 
   const isFav = favorites.includes(product.id);
   const isOwner = currentUser?.id === product.sellerId;
+  const localImg = productImageMap[product.id];
   const conditionColor = conditionColors[product.condition] ?? colors.mutedForeground;
 
   const handleChat = () => {
@@ -102,7 +104,9 @@ export default function ProductDetailScreen() {
       >
         {/* Image */}
         <View style={[styles.imageContainer, { backgroundColor: colors.muted }]}>
-          {product.images[0] ? (
+          {localImg ? (
+            <Image source={localImg} style={styles.mainImage} />
+          ) : product.images[0] ? (
             <Image source={{ uri: product.images[0] }} style={styles.mainImage} />
           ) : (
             <View style={styles.imagePlaceholder}>

@@ -10,6 +10,7 @@ import {
   View,
 } from "react-native";
 import { useApp, type Product } from "@/context/AppContext";
+import productImageMap from "@/constants/productImages";
 import { useColors } from "@/hooks/useColors";
 
 interface Props {
@@ -36,6 +37,8 @@ export default function ProductCard({ product, horizontal }: Props) {
     "Poor": colors.destructive,
   }[product.condition] ?? colors.mutedForeground;
 
+  const localImg = productImageMap[product.id];
+
   if (horizontal) {
     return (
       <Pressable
@@ -43,7 +46,9 @@ export default function ProductCard({ product, horizontal }: Props) {
         onPress={() => router.push(`/product/${product.id}` as never)}
       >
         <View style={[styles.hImageBox, { backgroundColor: colors.muted }]}>
-          {product.images[0] ? (
+          {localImg ? (
+            <Image source={localImg} style={styles.hImage} />
+          ) : product.images[0] ? (
             <Image source={{ uri: product.images[0] }} style={styles.hImage} />
           ) : (
             <Feather name="image" size={28} color={colors.mutedForeground} />
@@ -76,7 +81,9 @@ export default function ProductCard({ product, horizontal }: Props) {
       onPress={() => router.push(`/product/${product.id}` as never)}
     >
       <View style={[styles.imageBox, { backgroundColor: colors.muted }]}>
-        {product.images[0] ? (
+        {localImg ? (
+          <Image source={localImg} style={styles.image} />
+        ) : product.images[0] ? (
           <Image source={{ uri: product.images[0] }} style={styles.image} />
         ) : (
           <Feather name="image" size={36} color={colors.mutedForeground} />

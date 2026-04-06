@@ -18,3 +18,39 @@ id = "DILYyoLCVXr1G_oMBjIFa"
 uri = "file://artifacts/marketplace/assets/images/onboarding.png"
 type = "image"
 title = "generated_image"
+
+[[generated]]
+id = "XtrGHpZda4uBCr26iKqvO"
+uri = "file://artifacts/marketplace/assets/images/products/camera.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "XX5EOJIaYPt38Huj9zg4l"
+uri = "file://artifacts/marketplace/assets/images/products/leather_jacket.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "S3f2JOhmfpVvqMLkbdR-u"
+uri = "file://artifacts/marketplace/assets/images/products/macbook.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "rM2s-tQFJBUOF47XZxrps"
+uri = "file://artifacts/marketplace/assets/images/products/bicycle.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "UvsAZhEdCrki1RiUtVxo1"
+uri = "file://artifacts/marketplace/assets/images/products/kallax_shelf.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "JspY3B_QKdc7qUh-2Uoiw"
+uri = "file://artifacts/marketplace/assets/images/products/dyson_vacuum.png"
+type = "image"
+title = "generated_image"
