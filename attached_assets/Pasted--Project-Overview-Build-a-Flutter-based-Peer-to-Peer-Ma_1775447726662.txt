@@ -1,0 +1,85 @@
+🧠 Project Overview
+
+Build a Flutter-based Peer-to-Peer Marketplace Mobile Application that enables users to buy and sell second-hand goods efficiently. The platform must address key challenges such as lack of trust, poor product discovery, and inefficient communication between buyers and sellers.
+
+The application should provide a seamless experience for listing products, discovering items, communicating in real time, and completing secure transactions.
+
+🎯 Objectives
+
+The primary objectives of this MVP are:
+
+Enable users to list and sell second-hand products
+Allow buyers to search and discover products easily
+Provide real-time communication between buyers and sellers
+Build trust through ratings and reviews
+Integrate secure payment mechanisms
+Support offline browsing with data synchronization
+🚀 Platform Requirement
+
+The application must be built using Flutter to ensure:
+
+Cross-platform compatibility (Android & iOS)
+Faster development cycle
+Consistent UI/UX
+High performance for MVP delivery
+🧩 Core Features (MVP Scope)
+🔐 1. User Authentication
+Email & password login/signup
+Optional Google login
+User profile with basic details (name, profile picture, rating)
+🛍️ 2. Product Listing
+
+Users should be able to:
+
+Upload product images (up to 3–5)
+Add title, description, price
+Select category
+Add location details
+🔍 3. Product Discovery
+Keyword-based search
+Filters:
+Price range
+Category
+Location (basic filtering)
+💬 4. In-App Chat System
+Real-time messaging between buyer and seller
+Timestamped messages
+Basic chat UI
+⭐ 5. Ratings & Reviews
+Buyers can rate sellers (1–5 stars)
+Optional written reviews
+Ratings visible on user profiles
+💳 6. Secure Payment Integration
+
+Integrate a payment gateway such as:
+
+Razorpay (preferred for India)
+OR Stripe
+
+Features:
+
+Checkout flow
+Payment confirmation
+📦 7. Order Tracking (Basic)
+Order statuses:
+Pending
+Paid
+Shipped
+Completed
+📶 8. Offline Support
+Cache product listings locally
+Allow browsing without internet
+Sync updates when online
+🏗️ Tech Stack
+📱 Frontend
+Flutter (Dart)
+🔥 Backend (Recommended for MVP)
+
+Use Firebase for rapid development:
+
+Firebase Authentication → user management
+Cloud Firestore → database
+Firebase Storage → image uploads
+Firebase Cloud Messaging → notifications
+💬 Chat System
+Firestore real-time updates

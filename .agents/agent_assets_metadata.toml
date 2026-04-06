@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "UiYWu46VNgh_8QwnrFLOH"
+uri = "file://artifacts/marketplace/assets/images/icon.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "V_PADzUvlzE7R8GLFtqs7"
+uri = "file://artifacts/marketplace/assets/images/hero_products.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "DILYyoLCVXr1G_oMBjIFa"
+uri = "file://artifacts/marketplace/assets/images/onboarding.png"
+type = "image"
+title = "generated_image"
