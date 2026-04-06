@@ -94,7 +94,7 @@ export default function SellScreen() {
           styles.container,
           {
             paddingTop: insets.top + (Platform.OS === "web" ? 67 : 16),
-            paddingBottom: insets.bottom + (Platform.OS === "web" ? 34 : 100),
+            paddingBottom: insets.bottom + (Platform.OS === "web" ? 100 : 100),
           },
         ]}
         showsVerticalScrollIndicator={false}

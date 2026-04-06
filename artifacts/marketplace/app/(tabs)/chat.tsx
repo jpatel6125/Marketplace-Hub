@@ -46,7 +46,7 @@ export default function ChatScreen() {
         styles.container,
         {
           paddingTop: insets.top + (Platform.OS === "web" ? 67 : 16),
-          paddingBottom: insets.bottom + (Platform.OS === "web" ? 34 : 90),
+          paddingBottom: insets.bottom + (Platform.OS === "web" ? 100 : 90),
         },
       ]}
       showsVerticalScrollIndicator={false}
